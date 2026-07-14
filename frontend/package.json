@@ -24,6 +24,7 @@
     "@nx/angular": "22.7.5",
     "@nx/eslint": "22.7.5",
     "@nx/eslint-plugin": "22.7.5",
+    "@nx/js": "22.7.5",
     "@nx/vite": "22.7.5",
     "@nx/vitest": "22.7.5",
     "@typescript-eslint/utils": "^8.40.0",
