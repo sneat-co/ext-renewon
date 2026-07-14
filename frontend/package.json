@@ -6,7 +6,7 @@
   "packageManager": "pnpm@11.0.9",
   "scripts": {},
   "dependencies": {
-    "@angular/core": "21.2.9",
+    "@angular/core": "21.2.17",
     "@sneat/core": "0.22.1",
     "@sneat/data": "0.22.1",
     "@sneat/dto": "0.22.1",
