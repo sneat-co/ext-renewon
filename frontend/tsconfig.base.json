@@ -18,8 +18,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@sneat/extension-template-contract": [
-        "./libs/extensions/template/contract/src/index.ts"
+      "@sneat/extension-renewon-contract": [
+        "./libs/extensions/renewon/contract/src/index.ts"
       ]
     }
   },

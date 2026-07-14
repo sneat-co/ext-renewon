@@ -15,16 +15,16 @@ export interface GetOrCreateCommuneItemIds {
   communeShortId?: string;
 }
 
-// export abstract class IListService extends ICommuneItemService<IListDto, TemplateAppSchema, typeof ListKind> {
+// export abstract class IListService extends ICommuneItemService<IListDto, RenewOnAppSchema, typeof ListKind> {
 // 	abstract deleteList(listId: string, communeId: string): Observable<IListDto>;
 // }
 //
-// export abstract class IListItemService extends ICommuneItemService<IListItemDto, TemplateAppSchema, typeof ListItemKind> {
+// export abstract class IListItemService extends ICommuneItemService<IListItemDto, RenewOnAppSchema, typeof ListItemKind> {
 // 	// noinspection JSUnusedGlobalSymbols
 // 	// abstract txRemoveKinds(): string[];
 //
 // 	// noinspection JSUnusedGlobalSymbols
-// 	abstract selectByListId(tx: IRxReadonlyTransaction<TemplateAppSchema>, listId: string, status?: ListStatus)
+// 	abstract selectByListId(tx: IRxReadonlyTransaction<RenewOnAppSchema>, listId: string, status?: ListStatus)
 // 		: Observable<SelectResult<IListItemDto>>;
 // }
 
@@ -51,7 +51,7 @@ export interface IListItemsCommandParams {
 
 export type ReorderListItemsWorker = (listDto: IListDbo) => void;
 
-// export abstract class ITemplateService extends RxStoreService<TemplateAppSchema> {
+// export abstract class IRenewOnService extends RxStoreService<RenewOnAppSchema> {
 // 	abstract addListItem(params: IListItemCommandParams): Observable<IListItemResult>;
 //
 // 	abstract reorderListItems(params: IListItemCommandParams, reorderItems: ReorderListItemsWorker): Observable<IListDto>;

@@ -1,6 +1,6 @@
 {
-  "name": "@sneat/extension-template-contract",
-  "version": "0.0.1",
+  "name": "@sneat/extension-renewon-contract",
+  "version": "0.1.0",
   "publishConfig": {
     "access": "public"
   },

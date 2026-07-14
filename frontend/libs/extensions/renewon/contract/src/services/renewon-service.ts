@@ -12,13 +12,13 @@ import {
   ISetListItemsIsComplete,
 } from './interfaces';
 
-// ITemplateService is the runtime-light contract the template pages and components
+// IRenewOnService is the runtime-light contract the template pages and components
 // depend on. Members mirror the concrete ListService public surface used by the
 // UI; the implementation lives in the internal lib and is provided via the
-// TEMPLATE_SERVICE token below. The shared BaseListPage additionally needs the
+// RENEWON_SERVICE token below. The shared BaseListPage additionally needs the
 // inherited ModuleSpaceItemService surface, so it types the injected token as
 // an intersection with ModuleSpaceItemService<IListBrief, IListDbo>.
-export interface ITemplateService {
+export interface IRenewOnService {
   createList(request: ICreateListRequest): Observable<IListContext>;
   deleteList(space: ISpaceContext, listId: string): Observable<void>;
   reorderListItems(request: IReorderListItemsRequest): Observable<void>;
@@ -36,6 +36,6 @@ export interface ITemplateService {
   ): Observable<IListContext>;
 }
 
-export const TEMPLATE_SERVICE = new InjectionToken<ITemplateService>(
-  'TemplateService',
+export const RENEWON_SERVICE = new InjectionToken<IRenewOnService>(
+  'RenewOnService',
 );

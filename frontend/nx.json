@@ -44,11 +44,11 @@
   },
   "release": {
     "projects": [
-      "ext-template-contract"
+      "ext-renewon-contract"
     ],
     "projectsRelationship": "fixed",
     "version": {
-      "preVersionCommand": "pnpm nx build ext-template-contract"
+      "preVersionCommand": "pnpm nx build ext-renewon-contract"
     },
     "releaseTagPattern": "v{version}",
     "changelog": {
