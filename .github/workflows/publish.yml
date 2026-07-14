@@ -5,6 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   publish:
     uses: sneat-co/cicd/.github/workflows/npm-publish.yml@main
@@ -12,5 +15,5 @@ jobs:
       working-directory: frontend
       install-command: pnpm install --no-frozen-lockfile --ignore-scripts
       build-command: pnpm exec nx build ext-renewon-contract
-      publish-command: pnpm exec nx release publish --projects=ext-renewon-contract
+      publish-command: pnpm exec nx release --yes
     secrets: inherit

@@ -48,11 +48,26 @@
     ],
     "projectsRelationship": "fixed",
     "version": {
+      "conventionalCommits": true,
+      "fallbackCurrentVersionResolver": "disk",
       "preVersionCommand": "pnpm nx build ext-renewon-contract"
     },
     "releaseTagPattern": "v{version}",
+    "git": {
+      "commit": true,
+      "tag": true,
+      "push": true
+    },
     "changelog": {
+      "workspaceChangelog": true,
       "automaticFromRef": true
+    },
+    "publish": {
+      "executor": "@nx/js:release-publish",
+      "dependsOn": ["build"],
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
     }
   },
   "plugins": [
