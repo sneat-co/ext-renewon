@@ -13,7 +13,7 @@ jobs:
     uses: sneat-co/cicd/.github/workflows/npm-publish.yml@main
     with:
       working-directory: frontend
-      install-command: pnpm install --no-frozen-lockfile --ignore-scripts
+      install-command: pnpm install --frozen-lockfile --ignore-scripts
       build-command: pnpm exec nx build ext-renewon-contract
       publish-command: pnpm exec nx release --yes
     secrets: inherit
