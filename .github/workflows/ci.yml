@@ -1,0 +1,28 @@
+name: CI
+
+# This repo had NO pull_request-triggered gate: publish.yml runs only on push
+# to main / workflow_dispatch, so a "green" PR never meant the code built.
+# Real defects reached main that way — a stale dependency resolution that broke
+# the FESM bundler, and a missing devDependency that broke the test target.
+#
+# Runs the same targets the publish build depends on, but before the merge.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  nx:
+    name: lint · test · build
+    uses: sneat-co/cicd/.github/workflows/nx-ci.yml@main
+    with:
+      working-directory: frontend
+      targets: "lint test build"
